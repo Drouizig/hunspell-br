@@ -1,0 +1,16 @@
+Hunspell Breton (br_FR) dictionary
+Copyright (c) 2001-2018 Korvigelloù An Drouizig
+drouizig@drouizig.org - http://www.drouizig.org	
+
+Version 0.15 - release date: 2018-01-15
+--
+This dictionary is based on the original Breton 
+wordlist created by Philippe Basciano-Le Gall for 
+Korvigelloù an Drouizig. It is covered by the LGPL, 
+MPL and GPL licenses. The affix file has been heavily 
+modified by Michel "Boulc'hurun" Nedeleg.
+
+Thanks to both authors for there wonderful work !
+
+2018-01-15 Denis Arnaud
+* Words added (anlennet, aodio, pennbajenn, kevanek, skript, proksi, daouglik, daouglikañ, kelennskrid, makro, frammlun, spisverk, spisverkan, stlenngrafer). Review of -niañ verbs list (flag d6). 

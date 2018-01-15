@@ -1,0 +1,7 @@
+Language: Breton
+Hash-Name: br
+Emacsen-Name: breton
+Casechars: [abc’hdefgijklmnopqrstuvwxyzñùéâêà]
+Not-Casechars: [^abc’hdefgijklmnopqrstuvwxyzñùéâêà]
+Hunspell-Locales: br, br_FR
+Coding-System: utf-8
