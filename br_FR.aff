@@ -5,10 +5,23 @@
 # PEP GWIR MIRET STRIZH - KORVIGELLOÙ AN DROUIZIG
 
 # po (part of speech) :
-# g : anv gourel
-# b : anv benel
-# v : verb
 # aa : adanv
+# b : anv benel
+# bev : bevezour
+# g : anv gourel
+# v : verb
+#
+# is (inflectional suffix(es)) :
+# pl : plural
+# comp : comparative
+# super : superlative
+# excl : exclamative
+#
+# 
+# dv : dre vlotaat
+# dg : dre galetaat
+# dc : dre c'hwezhañ
+# ke : kemmesket
 
 SET UTF-8
 TRY esiaùnñrtolcdugmphbyfvkwzESIAÙNÑRTOLCDUGMPHBYFVKWZ'
@@ -16,6 +29,14 @@ TRY esiaùnñrtolcdugmphbyfvkwzESIAÙNÑRTOLCDUGMPHBYFVKWZ'
 WORDCHARS '
 
 FLAG long
+
+REP 3
+REP én ñ
+REP an añ
+REP en eñ
+REP in iñ
+REP on oñ
+REP un uñ
 
 PFX a0 Y 10
 PFX a0 0 m' [aehiou]
@@ -47,51 +68,55 @@ PFX m0 m v m
 PFX m0 d z d
 PFX m0 d t d
 
+#Kemmadur ober (gra>ra)
+PFX m1 Y 1
+PFX m1 g 0 .
+
 # Adanv
 SFX n1 Y 12
-SFX n1 0 añ [^hz]
-SFX n1 0 at [^hz]
-SFX n1 0 oc'h [^hz]
-SFX n1 0 añ [^z]h
-SFX n1 0 at [^z]h
-SFX n1 0 oc'h [^z]h
-SFX n1 z sañ z
-SFX n1 z sat z
-SFX n1 z soc'h z
-SFX n1 zh shañ zh
-SFX n1 zh shat zh
-SFX n1 zh shoc'h zh
+SFX n1 0 añ [^hz] is:super
+SFX n1 0 at [^hz] is:excl
+SFX n1 0 oc'h [^hz] is:comp
+SFX n1 0 añ [^z]h is:super
+SFX n1 0 at [^z]h is:excl
+SFX n1 0 oc'h [^z]h is:comp
+SFX n1 z sañ z is:super
+SFX n1 z sat z is:excl
+SFX n1 z soc'h z is:comp
+SFX n1 zh shañ zh is:super
+SFX n1 zh shat zh is:excl
+SFX n1 zh shoc'h zh is:comp
 
 # Liesterioù
 SFX p1 Y 1
-SFX p1 0 ed .
+SFX p1 0 ed . is:pl
 
 SFX p2 Y 1
-SFX p2 0 i .
+SFX p2 0 i . is:pl
 
 SFX p3 Y 1
-SFX p3 0 ion .
+SFX p3 0 ion . is:pl
 
 SFX p4 Y 1
-SFX p4 0 ioù .
+SFX p4 0 ioù . is:pl
 
 SFX p5 Y 1
-SFX p5 0 où .
+SFX p5 0 où . is:pl
 
 SFX p6 Y 1
-SFX p6 0 ien .
+SFX p6 0 ien . is:pl
 
 SFX p7 Y 1
-SFX p7 où eier .
+SFX p7 où eier . is:pl
 
 # Lostgerioù all
 SFX l4 Y 2
 SFX l4 0 ig .
-SFX l4 0 ioùigoù .
+SFX l4 0 ioùigoù . is:pl
 
 SFX l5 Y 2
 SFX l5 0 ig .
-SFX l5 0 oùigoù . 
+SFX l5 0 oùigoù .  is:pl
  
 # Displegadurioù 
 SFX a1 Y 42 
@@ -253,7 +278,8 @@ SFX d2 0 y . is:fti_p3_sg
  
 # Displegadurioù : displegadur dazeilel ar verboù dre -a (pesketa, boueta, ...) 
 # pesketa : pesketa- 
-SFX d3 Y 52 
+SFX d3 Y 53 
+SFX d3 0 0/d2 . 
 SFX d3 0 0 . is:imp_p2_sg
 SFX d3 0 0 . is:pri_p3_sg
 SFX d3 0 n . is:pri_p1_sg
@@ -474,3 +500,61 @@ SFX d6 gn niomp . is:pri_p1_pl
 SFX d6 gn niont . is:pri_p3_pl 
 SFX d6 gn nior . is:fti_impers_sp 
 SFX d6 gn niot . is:fti_p2_pl 
+
+# Displegadurioù : ober  
+SFX d7 Y 54  
+SFX d7 0 0 . is:pri_p3_sg
+SFX d7 0 0 . is:imp_p2_sg
+SFX d7 0 e . is:pii_p3_sg
+SFX d7 0 ec'h . is:pii_p2_pl
+SFX d7 0 ed . is:pii_impers_sp
+SFX d7 0 emp . is:pii_p1_pl
+SFX d7 0 en . is:pii_p1_sg
+SFX d7 0 ent . is:pii_p3_pl
+SFX d7 0 ent . is:imp_p3_pl
+SFX d7 0 es . is:pii_p2_sg
+SFX d7 0 et . is:imp_p3_sg
+SFX d7 0 et . is:pp
+SFX d7 0 etañ . is:sup
+SFX d7 0 etoc'h . is:comp
+SFX d7 0 fe . is:cni_p3_sg
+SFX d7 0 fec'h . is:cni_p2_pl
+SFX d7 0 fed . is:cni_impers_sp
+SFX d7 0 femp . is:cni_p1_pl
+SFX d7 0 fen . is:cni_p1_sg
+SFX d7 0 fent . is:cni_p3_pl
+SFX d7 0 fes . is:cni_p2_sg
+SFX d7 0 imp . is:fti_p1_pl
+SFX d7 0 int . is:fti_p3_pl
+SFX d7 0 io . is:fti_p3_sg
+SFX d7 0 je . is:cip_p3_sg
+SFX d7 0 jec'h . is:cip_p2_pl
+SFX d7 0 jed . is:cip_impers_sp
+SFX d7 0 jemp . is:cip_p1_pl
+SFX d7 0 jen . is:cip_p1_sg
+SFX d7 0 jent . is:cip_p3_pl
+SFX d7 0 jes . is:cip_p2_sg
+SFX d7 0 n . is:pri_p1_sg
+SFX d7 0 y . is:fti_p3_sg
+SFX d7 a eas . is:past_p3_sg
+SFX d7 a eer . is:pri_impers_sp
+SFX d7 a ejoc'h . is:past_p2_pl
+SFX d7 a ejod . is:past_impers_sp
+SFX d7 a ejomp . is:past_p1_pl
+SFX d7 a ejon . is:past_p1_sg
+SFX d7 a ejont . is:past_p3_pl
+SFX d7 a ejout . is:past_p2_sg
+SFX d7 a eoc'h . is:fti_p2_pl
+SFX d7 a eomp . is:pri_p1_pl
+SFX d7 a eomp . is:imp_p1_pl
+SFX d7 a eont . is:pri_p3_pl
+SFX d7 a eor . is:fti_impers_sp
+SFX d7 a eot . is:fti_p2_pl
+SFX d7 a ez . is:pri_p2_sg
+SFX d7 a i . is:fti_p2_sg
+SFX d7 a imp . is:fti_p1_pl
+SFX d7 a in . is:fti_p1_sg
+SFX d7 a is . is:past_p1_sg
+SFX d7 a it . is:pri_p2_pl
+SFX d7 a it . is:imp_p2_pl
+
