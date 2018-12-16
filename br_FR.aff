@@ -30,7 +30,7 @@ WORDCHARS '
 
 FLAG long
 
-REP 3
+REP 6
 REP én ñ
 REP an añ
 REP en eñ
