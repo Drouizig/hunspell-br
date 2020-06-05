@@ -109,6 +109,12 @@ SFX p6 0 ien . is:pl
 SFX p7 Y 1
 SFX p7 où eier . is:pl
 
+SFX p8 Y 1
+SFX p8 ad iz . is:pl
+
+SFX p9 Y 1
+SFX p9 ad idi . is:pl
+
 # Lostgerioù all
 SFX l4 Y 2
 SFX l4 0 ig .
