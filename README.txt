@@ -12,6 +12,10 @@ modified by Michel "Boulc'hurun" Nedeleg.
 
 Thanks to both authors for their wonderful work !
 
+2020-06-06 Denis Arnaud (still on progress...)
+* Uppercases added in m0 mutations rule.
+* Plural rules ad>iz (p8), iad>iz (p9) and ad>izi (p10) 
+
 2018-12-16 Denis Arnaud
 * Review of the verbs list (still on progress)
 * new flags (m1 and d7) for some verbs (ober, gouzout...)
